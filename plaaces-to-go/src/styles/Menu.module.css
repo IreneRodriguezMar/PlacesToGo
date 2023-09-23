@@ -1,0 +1,38 @@
+.contentNav{
+    display: flex;
+    align-items: center;
+    background: #f7e9da;
+}
+
+.logoTxt{
+    display: flex;
+    flex: 1;
+}
+
+.txtItem{
+    color: #3f6b7c;
+    font-size: 20px;
+    padding: 20px;
+    font-family: 'Lato', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 800;
+}
+
+.navItems{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    flex: 2;
+    color: #71899b;
+    text-decoration: none;
+    list-style-type: none;
+    padding: 0 20px;
+    font-family: 'Lato', 'Arial Narrow', Arial, sans-serif;
+}
+
+.navItems li:hover{
+    color: #b97479;;
+}
+.navItems li{
+    padding: 0 5px;
+}
