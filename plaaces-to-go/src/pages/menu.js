@@ -1,21 +1,24 @@
-import StyleMenu from '../styles/Menu.module.css'
+import StyleMenu from '../styles/Menu.module.css';
+import React, {useState} from 'react';
 
-export default function Menu() {
+export default function Navbar() {
+    const [isOpen, setIsOpen] = useState(false)
     return (
-        <nav className={StyleMenu.contentNav}>
-            <div className={StyleMenu.logoTxt}>
+        <nav className={StyleMenu.navbar}>
+            <div className={StyleMenu.navLogo}>
                 <p className={StyleMenu.txtItem}>
                     Places to Go
                 </p>
             </div>
-            <ul className={StyleMenu.navItems}>
+
+            <ul className={`${StyleMenu.navItems} ${isOpen && "open"}`}>
                 <li>
                     <a
                     href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
                     target="_blank"
                     rel="noopener noreferrer"
                     >
-                    Lorem1
+                    Inicio
                     </a>
                 </li>
                 <li>
@@ -24,7 +27,7 @@ export default function Menu() {
                     target="_blank"
                     rel="noopener noreferrer"
                     >
-                    Lorem2
+                    Lugares CDMX
                     </a>
                 </li>
                 <li>
@@ -33,7 +36,7 @@ export default function Menu() {
                     target="_blank"
                     rel="noopener noreferrer"
                     >
-                    Lorem3
+                    Lugares México
                     </a>
                 </li>
                 <li>
@@ -42,19 +45,16 @@ export default function Menu() {
                     target="_blank"
                     rel="noopener noreferrer"
                     >
-                    Lorem4
-                    </a>
-                </li>
-                <li>
-                    <a
-                    href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    >
-                    Lorem5
+                    Otros
                     </a>
                 </li>
             </ul>
+            <div className={`${StyleMenu.navToggle} ${isOpen && "open"}`} onClick={() => setIsOpen(!isOpen)}>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
         </nav>
     );
 }
