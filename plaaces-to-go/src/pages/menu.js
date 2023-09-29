@@ -2,7 +2,7 @@ import StyleMenu from '../styles/Menu.module.css';
 import React, {useState} from 'react';
 
 export default function Navbar() {
-    const [isOpen, setIsOpen] = useState(false)
+    const [isOpen, setIsOpen] = useState(true)
     return (
         <nav className={StyleMenu.navbar}>
             <div className={StyleMenu.navLogo}>
@@ -10,8 +10,7 @@ export default function Navbar() {
                     Places to Go
                 </p>
             </div>
-
-            <ul className={`${StyleMenu.navItems} ${isOpen && "open"}`}>
+            <ul className={`${StyleMenu.navItems} ${isOpen && StyleMenu.openNav}`}>
                 <li>
                     <a
                     href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
@@ -49,7 +48,7 @@ export default function Navbar() {
                     </a>
                 </li>
             </ul>
-            <div className={`${StyleMenu.navToggle} ${isOpen && "open"}`} onClick={() => setIsOpen(!isOpen)}>
+            <div className={`${StyleMenu.navToggle} ${isOpen && StyleMenu.openNav}`} onClick={() => setIsOpen(!isOpen)}>
                 <span></span>
                 <span></span>
                 <span></span>
